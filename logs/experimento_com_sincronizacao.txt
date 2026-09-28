@@ -1,0 +1,23 @@
+EXPERIMENTO COM SINCRONIZAÇÃO
+
+Data do teste: 28/09/2026
+
+Configuração:
+- Servidor executado com sincronização.
+- Foram utilizados 3 clientes simultâneos.
+- Cada cliente enviou 10 solicitações de reserva.
+- Total de solicitações enviadas: 30.
+
+Resultado:
+- Solicitações enviadas: 30
+- Respostas OK recebidas: 30
+- Assentos ocupados: 30
+- Valor final do contador: 30
+- Tempo total de execução: 358 ms
+- Sincronização: ATIVA
+
+Análise:
+Com a sincronização ativada, todas as atualizações foram realizadas corretamente.
+O contador terminou com o valor 30, correspondendo ao total de reservas efetuadas.
+A sincronização impediu que duas ou mais threads alterassem o contador ao mesmo
+tempo, eliminando a condição de corrida observada no primeiro experimento.

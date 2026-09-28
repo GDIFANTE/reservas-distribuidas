@@ -1,0 +1,23 @@
+EXPERIMENTO SEM SINCRONIZAÇÃO
+
+Data do teste: 28/09/2026
+
+Configuração:
+- Servidor executado sem sincronização.
+- Foram utilizados 3 clientes simultâneos.
+- Cada cliente enviou 10 solicitações de reserva.
+- Total de solicitações enviadas: 30.
+
+Resultado:
+- Solicitações enviadas: 30
+- Respostas OK recebidas: 30
+- Assentos ocupados: 30
+- Valor final do contador: 10
+- Tempo total de execução: 167 ms
+- Sincronização: DESATIVADA
+
+Análise:
+Mesmo com as 30 reservas sendo realizadas, o contador terminou com o valor 10.
+Isso aconteceu porque várias threads acessaram e alteraram o contador ao mesmo
+tempo, causando perda de atualizações. O resultado demonstra a existência de
+uma condição de corrida no servidor quando a sincronização está desativada.

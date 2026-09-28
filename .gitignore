@@ -1,0 +1,12 @@
+# Arquivos compilados
+out/
+*.class
+
+# Configuracoes locais do VS Code
+.vscode/
+
+# Arquivos temporarios
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
